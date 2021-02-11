@@ -8,4 +8,5 @@ class TravelAppColors {
   static const blue = Color.fromRGBO(31, 31, 152, 1);
   static const pink = Color.fromRGBO(255,112,162,1);
   static final white =const Color(0xFFFFFFFF);
+  static const gray = const Color(0xFF9E9E9E);
 }

@@ -7,14 +7,14 @@ import 'package:travlingapp/Common/String.dart';
 import 'package:travlingapp/Common/colors.dart';
 import 'package:travlingapp/Screen/loginscreen.dart';
 
-import 'package:travlingapp/component/button.dart';
+import 'package:travlingapp/component/floatingactionbutton.dart';
 
-class OpenningPage extends StatefulWidget {
+class SignUpPage extends StatefulWidget {
   @override
-  OpeningPageState createState() =>  OpeningPageState();
+  SignUpPageState createState() => SignUpPageState();
 }
 
-class OpeningPageState extends State<OpenningPage> {
+class SignUpPageState extends State<SignUpPage> {
   CarouselSlider carouselSlider;
   int _current = 0;
 
@@ -24,8 +24,8 @@ class OpeningPageState extends State<OpenningPage> {
     //exception handling
     try {
       for (var i = 0; i < list.length; i++) {
-          result.add(handler(i, list[i]));
-         }
+        result.add(handler(i, list[i]));
+      }
     } catch (e) {
       print(e);
     }
@@ -35,13 +35,13 @@ class OpeningPageState extends State<OpenningPage> {
   @override
   Widget build(BuildContext context) {
     //Orientation for the screen
-    double height = MediaQuery.of(context).size.height;
+    double height1 = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     try {
       if (width > 600) {
-      return View(height=150);
+        return View(height1=150);
       } else {
-        return View(height=500);
+        return View(height1=500);
 
       }
     } catch (e) {}
@@ -49,6 +49,7 @@ class OpeningPageState extends State<OpenningPage> {
   //declaring widget
   Widget View(height) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         //setting width and height with mediaquery
         width: MediaQuery.of(context).size.width,
@@ -117,10 +118,10 @@ class OpeningPageState extends State<OpenningPage> {
             CustomButton(
               text: Strings.stratmessage,
               onPressed: () {
-                // builder: (BuildContext context) =>  OpenningPage()
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (BuildContext context) =>  LoginScreen()));
 
-
-              },
+                },
             )
           ],
         ),

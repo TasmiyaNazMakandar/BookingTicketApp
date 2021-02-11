@@ -15,7 +15,8 @@ class CustomButton extends StatelessWidget {
       backgroundColor: TravelAppColors.pink,
         onPressed: onPressed,
       label: Text(text,style: TextStyle(
-        fontSize: 20
+        fontSize: 20,
+
       ),
       ),
          );

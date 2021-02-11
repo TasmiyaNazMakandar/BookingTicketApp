@@ -5,7 +5,8 @@ import 'package:flutter/services.dart';
 
 import 'package:travlingapp/Common/String.dart';
 import 'package:travlingapp/Common/colors.dart';
-import 'package:travlingapp/Screen/openingscreen.dart';
+
+import 'package:travlingapp/Screen/signup.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds:3),
             () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) =>  OpenningPage())));
+            builder: (BuildContext context) =>  SignUpPage())));
   }
   @override
   Widget build(BuildContext context) {
@@ -37,14 +38,14 @@ class _SplashScreenState extends State<SplashScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(Strings.navana,style: TextStyle(
+                Text(Strings.string1,style: TextStyle(
                   color: TravelAppColors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
                 ),),
                 SizedBox(width: 10,),
-                Text(Strings.air,style: TextStyle(
-                 color:TravelAppColors.pink,
+                Text(Strings.string2,style: TextStyle(
+                  color:TravelAppColors.pink,
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
                 ),)
