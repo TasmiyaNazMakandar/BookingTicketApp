@@ -12,6 +12,11 @@ class Strings {
   static const String buttontext1="Sing In";
   static const String buttontext2="Skipp For Now";
   static const String asking="Already have an account?";
+  static const String validationtxt="This field cant not be empty";
+  static const String emailmessage="Enter valid email id";
+  static const String passmessage="Enter valid password";
+  static const String title1="Create";
+  static const String title2="an account";
 
 
 
